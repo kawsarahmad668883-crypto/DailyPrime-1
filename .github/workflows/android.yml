@@ -1,0 +1,10 @@
+- name: Setup Android SDK
+  uses: android-actions/setup-android@v4
+  with:
+    packages: 'platform-tools'
+
+- name: Install Android SDK
+  run: |
+    sdkmanager --install \
+      "platforms;android-34" \
+      "build-tools;34.0.0"
